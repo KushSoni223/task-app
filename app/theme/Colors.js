@@ -1,0 +1,26 @@
+export const colors = {
+  lightThem: {
+    white: 'rgba(255,255,255,1)',
+    black: 'rgba(0,0,0,1)',
+    transparent: 'rgba(0,0,0,0)',
+    text: 'rgba(0,0,0,1)',
+    primary: 'rgba(255,255,255,1)',
+    background: 'rgba(250, 250, 250, 1)',
+    semiTransBlack: 'rgba(0, 0, 0, 0.5)',
+    customTransparent: opacity => `rgba(0, 0, 0,${opacity ?? 1})`,
+    customWhite: opacity => `rgba(255, 255, 255,${opacity ?? 1})`,
+    customBlack: opacity => `rgba(0, 0, 0,${opacity ?? 1})`,
+  },
+  darkThem: {
+    white: 'rgba(0,0,0,1)',
+    black: 'rgba(255,255,255,1)',
+    transparent: 'rgba(0,0,0,0)',
+    text: 'rgba(255,255,255,1)',
+    semiTransBlack: 'rgba(0, 0, 0, 0.5)',
+    primary: 'rgba(0, 0, 0, 1)',
+    background: 'rgba(12, 12, 12, 1)',
+    customTransparent: opacity => `rgba(0, 0, 0,${opacity ?? 1})`,
+    customWhite: opacity => `rgba(0, 0, 0,${opacity ?? 1})`,
+    customBlack: opacity => `rgba(255, 255, 255,${opacity ?? 1})`,
+  },
+};
