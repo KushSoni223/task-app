@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 import Icon from '@react-native-vector-icons/fontawesome6';
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {
   Image,
   StyleSheet,
@@ -29,6 +29,12 @@ export const SignInScreen = () => {
       console.log('error', error);
     }
   };
+
+  useEffect(() => {
+    setEmail('');
+    setPassword('');
+  }, []);
+
   return (
     <View style={styles.container}>
       <View style={styles.logoContainer}>
@@ -76,6 +82,7 @@ export const SignInScreen = () => {
           onPress={() => {
             userLogin();
           }}
+          disabled={email === '' || password === ''}
           style={{
             backgroundColor: email !== '' && password !== '' ? 'green' : 'gray',
             paddingVertical: size.moderateScale(8),
